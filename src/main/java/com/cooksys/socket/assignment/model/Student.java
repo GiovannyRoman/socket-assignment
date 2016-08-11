@@ -20,7 +20,22 @@ public class Student {
     @XmlElement(name = "favorite-paradigm")
     private String favoriteParadigm;
 
-    public String getFirstName() {
+    public Student()
+    {
+    	
+    }
+    
+    public Student(String firstName, String lastName, String favoriteIDE, String favoriteLanguage,
+			String favoriteParadigm) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.favoriteIDE = favoriteIDE;
+		this.favoriteLanguage = favoriteLanguage;
+		this.favoriteParadigm = favoriteParadigm;
+	}
+
+	public String getFirstName() {
         return firstName;
     }
 

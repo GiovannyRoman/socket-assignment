@@ -17,7 +17,17 @@ public class Config {
     @XmlElement(name = "student-file-path")
     private String studentFilePath;
 
-    public LocalConfig getLocal() {
+    public Config() {
+	}
+
+	public Config(LocalConfig local, RemoteConfig remote, String studentFilePath) {
+		super();
+		this.local = local;
+		this.remote = remote;
+		this.studentFilePath = studentFilePath;
+	}
+
+	public LocalConfig getLocal() {
         return local;
     }
 
